@@ -1,5 +1,14 @@
 {
-  "driver":[],
-  "passengers":[],
-  "appointments":[]
+  "user":[{
+    "id":"id",
+    "name":"ismael",
+    "address":"",
+    "date":"",
+    "type":"driver|passengers"
+  }], 
+  "appointments":[{
+    "to":"id",
+    "from":"someone",
+    "verify":false
+  }]
 }
