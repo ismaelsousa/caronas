@@ -9,6 +9,7 @@
   "appointments":[{
     "to":"id",
     "from":"someone",
-    "verify":false
+    "verify":false,
+    "type":0
   }]
 }

@@ -29,3 +29,4 @@ export const Image = styled.img`
  opacity:1;
  width:50%;
 `
+
