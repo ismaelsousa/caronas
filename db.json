@@ -1,15 +1,28 @@
 {
-  "user":[{
-    "id":"id",
-    "name":"ismael",
-    "address":"",
-    "date":"",
-    "type":"driver|passengers"
-  }], 
-  "appointments":[{
-    "to":"id",
-    "from":"someone",
-    "verify":false,
-    "type":0
-  }]
+  "travels": [
+    {
+      "name": "ismael",
+      "destiny": "lss",
+      "date": "2020-10-12T11:25",
+      "verify": false,
+      "type": "Driver",
+      "id": 1
+    },
+    {
+      "name": "Denislon",
+      "destiny": "Russas-ce",
+      "date": "2020-10-12T11:26",
+      "verify": false,
+      "type": "Driver",
+      "id": 2
+    },
+    {
+      "name": "Ismael",
+      "destiny": "Russas-ce",
+      "date": "2020-10-12T11:29",
+      "verify": false,
+      "type": "Driver",
+      "id": 3
+    }
+  ]
 }
