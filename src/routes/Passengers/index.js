@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
 
-import { Container,Content, Image } from './styles';
 import PassengersImage from '../../assets/Passengers.jpg'
 import Input from '../../Component/Input';
-import { Alert, Button } from 'rsuite';
+import { Alert, Button, Icon, IconButton } from 'rsuite';
 import api from '../../services/api';
+import { useHistory } from 'react-router-dom';
+import { Container,Content, Image } from './styles';
 
 function Passengers() {
+
+  const {goBack} = useHistory()
   
   /**
    * States
   */
-
  const [name,setName] = useState('')
  const [destiny,setDestiny] = useState('')
  const [date,setDate] = useState('')
 
  const handleConfirm = async ()=>{
-   console.log({name, destiny, date})
+  if(!name || !destiny|| ! date) {
+    Alert.error("Por favor, preencha todas informações!")
+    return
+  }
    try {
      await api.post('/travels', {
        name, 
        destiny, 
        date,  
        verify:false,
-       type:"Driver"
+       type:"Passengers"
      })
      Alert.success("Dados salvos")
      setName('')
@@ -39,7 +44,7 @@ function Passengers() {
  return (
    <Container>
      <Content>
-       <h1>Carona</h1>
+       <h1>Passageiro</h1>
        <Input 
           type="text" 
           value={name} 
@@ -59,6 +64,18 @@ function Passengers() {
           placeholder='Nome'
         />
         <Button onClick={handleConfirm} color='green'>Confirmar</Button>
+        <div style={{position:'absolute', top:20, left:20}}>
+          <IconButton  
+            onClick={()=>goBack()}
+            icon={<Icon icon='chevron-left'/>
+          }/>
+        </div>
+        {/* <div style={{position:'absolute', bottom:20, right:20}}>
+          <span>Já tem cadastro? </span>
+          <IconButton circle color='orange' 
+            icon={<Icon icon='chevron-right'/>
+          }/>
+        </div> */}
      </Content>
      <Image src={PassengersImage} alt='Passengers'/>
    </Container>
