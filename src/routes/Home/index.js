@@ -12,8 +12,24 @@ function Home() {
       <Image src={Car} alt='cars'/>
       <Content>
         <h1>Caronas</h1>
-       <Button block size='lg' color="orange" appearance='default' onClick={()=>push('/Driver')} >Motorista</Button>
-       <Button  block size='lg' color="green" appearance='default' onClick={()=>push('/Passengers')} >Passageiro</Button>
+       <Button 
+          block 
+          size='lg' 
+          color="orange" 
+          appearance='default' 
+          onClick={()=>push('/Driver')} 
+        >
+          Motorista
+       </Button>
+       <Button  
+        block 
+        size='lg' 
+        color="green" 
+        appearance='default' 
+        onClick={()=>push('/Passengers')} 
+       >
+         Passageiro
+        </Button>
       </Content>
     </Container>
   )

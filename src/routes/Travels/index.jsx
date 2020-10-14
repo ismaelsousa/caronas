@@ -20,7 +20,6 @@ function Travels() {
    if(passengers.data.length>0 && driver.data.length>0){
     for (let i = 0; i < driver.data.length; i++) {
       for (let j = 0; j < passengers.data.length; j++) {
-        console.log({i,j})
         if(driver.data[i].date === passengers.data[j].date && driver.data[i].destiny === passengers.data[j].destiny){
           Notification.open({
             title: 'Carona',
@@ -118,7 +117,7 @@ function Travels() {
             <List bordered>
               {dataPassengers.map((item, index)=>(
                 <List.Item index={index} key={index} >
-                {<Badge style={item.verify?{background:'green'}:{}} />} {item.name}, {item.destiny}, {new Date(item.date).toLocaleString()} 
+                {<Badge style={item.verify ? {background:'green'} : {}} />} {item.name}, {item.destiny}, {new Date(item.date).toLocaleString()} 
                 </List.Item>
               ))}
             </List>

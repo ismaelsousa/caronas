@@ -70,12 +70,7 @@ function Passengers() {
             icon={<Icon icon='chevron-left'/>
           }/>
         </div>
-        {/* <div style={{position:'absolute', bottom:20, right:20}}>
-          <span>Já tem cadastro? </span>
-          <IconButton circle color='orange' 
-            icon={<Icon icon='chevron-right'/>
-          }/>
-        </div> */}
+      
      </Content>
      <Image src={PassengersImage} alt='Passengers'/>
    </Container>
